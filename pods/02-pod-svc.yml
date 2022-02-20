@@ -2,17 +2,15 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: sample4
-  lables:
+  labels:
     app: nginx
 spec:
   containers:
     - name: nginx
       image: nginx
-    
 ---
-
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: sample4-svc
 spec:
@@ -22,9 +20,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      
 ---
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -33,6 +29,7 @@ spec:
   containers:
     - name: nginx
       image: nginx
-    ports:
-      - containerPort: 80
-        hostPort: 30000
+      ports:
+        - containerPort: 80
+          hostPort: 30000
+
