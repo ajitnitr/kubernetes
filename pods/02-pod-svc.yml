@@ -31,8 +31,8 @@ metadata:
   name: sample5
 spec:
   containers:
-    name: nginx
-    image: nginx
+    - name: nginx
+      image: nginx
     ports:
       - containerPort: 80
         hostPort: 30000
