@@ -26,14 +26,13 @@ spec:
 ---
 
 apiVersion: v1
-kind: service
+kind: Pod
 metadata:
-  name: sample4-svc-hp
+  name: sample5
 spec:
-  selector:
-    app: nginx
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-      hostPort: 30000
+  containers:
+    name: nginx
+    image: nginx
+    ports:
+      - containerPort: 80
+        hostPort: 30000
