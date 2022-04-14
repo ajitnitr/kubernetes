@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: roboshop
   namespace: dev
-  
 data:
   CATALOGUE_HOST: catalogue
+  CATALOGUE_PORT: "8080"
   AMQP_HOST: rabbitmq
   CART_HOST: cart
   CART_PORT: "8080"
